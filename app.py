@@ -1,4 +1,5 @@
-from langchain.chains.history_aware_retriever import create_history_aware_retriever
+from langchain.chains.history_aware_retriever.base import create_history_aware_retriever
+
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_chroma import Chroma
@@ -98,5 +99,6 @@ if api_key:
             st.write("Chat History: ",session_history.messages)
 else:
     st.warning("Please enter the groq api key")
+
 
 
